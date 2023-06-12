@@ -1,4 +1,4 @@
-package com.book.bookprac;
+package com.book.bookprac.member;
 
 import jakarta.persistence.*;
 
