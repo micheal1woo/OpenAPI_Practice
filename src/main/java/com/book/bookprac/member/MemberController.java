@@ -24,4 +24,9 @@ public class MemberController {
         return memberService.membercheck(email);
 
     }
+
+    @PostMapping("/login")
+    public String login(@RequestBody LoginRequestDto loginRequestDto) {
+        return memberService.login(loginRequestDto);
+    }
 }

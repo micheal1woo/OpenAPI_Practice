@@ -15,6 +15,27 @@ public class Member {
     private String password;
     @Column
     private String nickname;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
     @Column
     private String image;
 

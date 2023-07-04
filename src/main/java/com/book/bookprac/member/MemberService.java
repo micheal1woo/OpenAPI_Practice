@@ -37,6 +37,19 @@ public class MemberService {
     }
 
 
+    public String login(LoginRequestDto loginRequestDto) {
+        String email = loginRequestDto.getEmail();
+        String password = loginRequestDto.getPassword();
 
+        Optional<Member> findmember = memberRepository.findByEmail(email);
+        if (findmember.isEmpty()) {
+            throw new RuntimeException("회원이 없습니다.");
+        }
 
+        if (!findmember.get().getPassword().equals(password)) {
+            throw new RuntimeException("비밀번호가 일치하지 않습니다.");
+        }
+
+        return "로그인 완료";
+    }
 }
